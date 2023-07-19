@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Usage Example</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+      font-size: larger;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="myHeading">Hello, World!</h1>
+  <p id="myParagraph">This is a paragraph.</p>
+  <button id="myButton">Click Me</button>
+
+  <script>
+    // Accessing and modifying elements
+    var heading = document.getElementById("myHeading");
+    heading.innerHTML = "Welcome to my Website";
+    
+    var paragraph = document.getElementById("myParagraph");
+    paragraph.style.color = "blue";
+    
+    // Adding event listener
+    var button = document.getElementById("myButton");
+    button.addEventListener("click", function() {
+      paragraph.classList.toggle("highlight");
+    });
+  </script>
+</body>
+</html>

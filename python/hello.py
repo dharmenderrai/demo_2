@@ -1,12 +1,12 @@
+from typing import List
+
+
 def countWords(word, letter):
     count = 0
     for elem in word:
-        if (elem == letter):
+        if elem == letter:
             count += 1
     return count
-
-
-from typing import List
 
 
 def find_the_duplicate(nums: List[int]):

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Usage Example</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="myHeading">Shopping List</h1>
+  <ul id="myList"></ul>
+  <input type="text" id="itemInput" placeholder="Enter an item">
+  <button id="addItemButton">Add Item</button>
+
+  <script>
+    var addButton = document.getElementById("addItemButton");
+    var itemInput = document.getElementById("itemInput");
+    var list = document.getElementById("myList");
+
+    addButton.addEventListener("click", function() {
+      var itemText = itemInput.value;
+      if (itemText) {
+        var listItem = document.createElement("li");
+        listItem.innerHTML = itemText;
+        listItem.addEventListener("click", function() {
+          this.classList.toggle("highlight");
+        });
+        list.appendChild(listItem);
+        itemInput.value = "";
+      }
+    });
+  </script>
+</body>
+</html>

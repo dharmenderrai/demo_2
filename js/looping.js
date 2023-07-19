@@ -32,13 +32,45 @@
 
 const countZeros_var = function (arr){
   let total = 0;
-  arr.forEach(function(val){
+  arr.forEach(
+    function(val){
     if(val === 0) {
         total++;
     }
-  });
+  }
+  );
   return total;
 }
 
+console.log(countZeros_var([1, 0, 0, 1, 2, 3]))
+let count = 0;
+for (let num of [1, 0, 0, 1, 2, 3]) {
+  if (num === 0) {
+    count++;
+  }
+}
+console.log(count);
 
-console.log(countZeros_var([0, 1, 2, 3]))
+// const cities = [
+//   "San Francisco",
+//   "Berlin",
+//   "Tokyo",
+//   "Moscow",
+//   "Buenos Aires"
+// ];
+
+// for (let city of cities) {
+//   console.log(city);
+// }
+
+// const cities = [
+//   "San Francisco",
+//   "Berlin",
+//   "Tokyo",
+//   "Moscow",
+//   "Buenos Aires"
+// ];
+
+// for (let i = 0; i < cities.length; i++) {
+//   console.log(cities[i]);
+// }

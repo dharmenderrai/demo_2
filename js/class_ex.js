@@ -14,7 +14,7 @@ class Car {
     model() {
         return this.year;
     }
-  }
+}
   
-  const myCar = new Car("Ford", 2014);
-  console.log(myCar.car_name())
+const myCar = new Car("Ford", 2014);
+console.log(myCar.car_name())

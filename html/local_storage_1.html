@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Local Storage Example</title>
+</head>
+<body>
+  <input type="text" id="inputField" placeholder="Enter a value">
+  <button id="saveButton">Save</button>
+  <p id="output"></p>
+
+  <script>
+    var inputField = document.getElementById("inputField");
+    var saveButton = document.getElementById("saveButton");
+    var output = document.getElementById("output");
+
+    // Retrieve the stored value on page load
+    window.addEventListener("load", function() {
+      var storedValue = localStorage.getItem("myValue");
+      if (storedValue) {
+        output.textContent = "Stored Value: " + storedValue;
+      } else {
+        output.textContent = "No value stored.";
+      }
+    });
+
+    // Save the input value to localStorage
+    saveButton.addEventListener("click", function() {
+      var valueToStore = inputField.value;
+      localStorage.setItem("myValue", valueToStore);
+      output.textContent = "Stored Value: " + valueToStore;
+      localStorage.setItem("myAnotherValue", "Dharmender");      
+      inputField.value = "";
+    });
+  </script>
+</body>
+</html>
